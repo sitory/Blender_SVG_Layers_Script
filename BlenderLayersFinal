@@ -1,0 +1,12 @@
+import bpy
+import string
+
+Object = "Curve"
+Move = 0.001
+Layer = 0
+LayNum = 0
+while bpy.data.objects.get(Object) is not None:
+        bpy.data.objects[Object].location.z += Layer
+        LayNum = LayNum + 1
+        Layer = Layer + Move
+        Object= "Curve." + str(LayNum).zfill(3)
