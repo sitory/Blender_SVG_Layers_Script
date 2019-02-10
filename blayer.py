@@ -13,6 +13,7 @@ while bpy.data.objects.get(Object) is not None:
     #Rotation
     bpy.data.objects[Object].rotation_euler = (1.5708,0,0)
     #Set origin
+    bpy.ops.object.origin_set(type='ORIGIN_GEOMETRY')
     #Move the layers
     bpy.data.objects[Object].location.y = Layer
     LayNum = LayNum + 1
