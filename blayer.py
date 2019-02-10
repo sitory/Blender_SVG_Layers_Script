@@ -19,3 +19,5 @@ while bpy.data.objects.get(Object) is not None:
     LayNum = LayNum + 1
     Layer = Layer + Move
     Object= "Curve." + str(LayNum).zfill(3)
+
+    
