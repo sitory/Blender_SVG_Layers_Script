@@ -1,5 +1,4 @@
 import bpy
-import string
 
 Object = "Curve"
 Move = 0.001
