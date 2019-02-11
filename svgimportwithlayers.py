@@ -1,7 +1,7 @@
 import bpy
 import math
 Move = -0.001
-Scale = 10
+Scale = 20
 Angle = 90
 
 def SelectCurves():
@@ -23,6 +23,7 @@ def ImportSVG():
   Layer = Layer + Move
   Object= "Curve." + str(LayNum).zfill(3)
 
+bpy.ops.object.select_all(action='DESELECT')
 SelectCurves()
 bpy.ops.object.origin_set(type='ORIGIN_GEOMETRY')
 ImportSVG()
@@ -30,4 +31,3 @@ bpy.ops.transform.resize(value=(Scale, 1, Scale))
 #Cursor to center
 bpy.context.scene.cursor_location = (0.0, 0.0, 0.0)
 # Use Shift + S - > Selection to Cursor (Offset) to move your model to center
-# To resize your model, use S -> Shift+Y (25 is a good value for Inkscape)
