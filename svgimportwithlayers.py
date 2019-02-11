@@ -1,12 +1,14 @@
 import bpy
+import math
 Move = -0.001
 Scale = 10
+Angle = 90
 
 def SelectCurves():
  SelectedCurve = "Curve"
  SelectedCurveNumber = 0
  while bpy.data.objects.get(SelectedCurve) is not None:
-  bpy.data.objects[SelectedCurve].rotation_euler = (1.5708,0,0)
+  bpy.data.objects[SelectedCurve].rotation_euler = (math.radians(Angle),0,0)
   bpy.data.objects[SelectedCurve].select = True
   SelectedCurveNumber = SelectedCurveNumber + 1
   SelectedCurve= "Curve." + str(SelectedCurveNumber).zfill(3)
