@@ -1,6 +1,6 @@
 import bpy
 Move = -0.001
-Scale = 25
+Scale = 10
 
 def SelectCurves():
  SelectedCurve = "Curve"
