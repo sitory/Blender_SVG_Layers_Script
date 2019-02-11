@@ -31,3 +31,4 @@ bpy.ops.transform.resize(value=(Scale, 1, Scale))
 #Cursor to center
 bpy.context.scene.cursor_location = (0.0, 0.0, 0.0)
 # Use Shift + S - > Selection to Cursor (Offset) to move your model to center
+# Use S -> Shift+Y to resize your model
