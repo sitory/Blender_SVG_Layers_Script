@@ -25,3 +25,7 @@ def ImportSVG():
 SelectCurves()
 bpy.ops.object.origin_set(type='ORIGIN_GEOMETRY')
 ImportSVG()
+#Cursor to center
+bpy.context.scene.cursor_location = (0.0, 0.0, 0.0)
+# Use Shift + S - > Selection to Cursor (Offset)
+# To resize your model, use S -> Shift+Y
