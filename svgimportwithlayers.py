@@ -1,4 +1,6 @@
 import bpy
+Move = -0.001
+Scale = 25
 
 def SelectCurves():
  SelectedCurve = "Curve"
@@ -11,7 +13,6 @@ def SelectCurves():
 
 def ImportSVG():
  Object = "Curve"
- Move = -0.001
  Layer = 0
  LayNum = 0
  while bpy.data.objects.get(Object) is not None:
@@ -23,6 +24,7 @@ def ImportSVG():
 SelectCurves()
 bpy.ops.object.origin_set(type='ORIGIN_GEOMETRY')
 ImportSVG()
+bpy.ops.transform.resize(value=(Scale, 1, Scale))
 #Cursor to center
 bpy.context.scene.cursor_location = (0.0, 0.0, 0.0)
 # Use Shift + S - > Selection to Cursor (Offset) to move your model to center
